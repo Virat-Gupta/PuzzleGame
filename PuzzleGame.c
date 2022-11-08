@@ -2,8 +2,8 @@
 #include <windows.h>
 
 #define NULL 0
-int game[4][4]={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,NULL,15}};
-int winarr[4][4] = { {1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,NULL} };
+int game[4][4]={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,NULL,15}};//setting starting array
+int winarr[4][4] = { {1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,NULL} };//setting winning condition
 
 void show();
 void play();
@@ -72,6 +72,7 @@ void play()
 	}
 }
 
+//detecting position of empty element
 void detectnull ()
 {
 	for (int i = 0; i <= 3; i++)
@@ -89,6 +90,7 @@ void detectnull ()
 	return;
 }
 
+//shifts 0 down
 void up()
 {
 	detectnull();
@@ -103,6 +105,7 @@ void up()
 	return;
 }
 
+// shifts 0 up
 void down()
 {
 	detectnull();
@@ -117,6 +120,7 @@ void down()
 	return;
 }
 
+//shifts 0 right
 void left()
 {
 	detectnull();
@@ -131,6 +135,7 @@ void left()
 	return;
 }
 
+//shifts 0 left
 void right()
 {
 	detectnull();
