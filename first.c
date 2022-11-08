@@ -61,7 +61,6 @@ void play()
 	else
 	{
 		char choice;
-		int intchoice =0;
 		printf("Enter here :");
 		scanf("%c", &choice);
 		if (choice == 'W' || choice == 'w') up();
